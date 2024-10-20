@@ -4,15 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Love</title>
+    <!-- Google Font for a playful vibe -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Happy Birthday, My Love!</h1>
+        <h1><i class="fas fa-heart"></i> Happy Birthday, My Love! <i class="fas fa-heart"></i></h1>
         <p id="countdown"></p>
-        <button onclick="generateReason()">Why I Love You 💕</button>
+
+        <!-- Cute Photo Slideshow with borders -->
+        <div class="photo-booth">
+            <button class="prev" onclick="prevSlide()">❮</button>
+            <div class="slideshow">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image1.jpg" alt="Memory 1">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image2.jpg" alt="Memory 2">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image3.jpg" alt="Memory 3">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image4.jpg" alt="Memory 4">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image5.jpg" alt="Memory 5">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image6.jpg" alt="Memory 6">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image7.jpg" alt="Memory 7">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image8.jpg" alt="Memory 8">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image9.jpg" alt="Memory 9">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image10.jpg" alt="Memory 10">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image11.jpg" alt="Memory 11">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image12.jpg" alt="Memory 12">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image13.jpg" alt="Memory 13">
+                <img class="slides" src="https://github.com/your-username/repository-name/raw/main/image14.jpg" alt="Memory 14">
+            </div>
+            <button class="next" onclick="nextSlide()">❯</button>
+        </div>
+
+        <button onclick="generateReason()" class="love-button">
+            <i class="fas fa-heart"></i> Why I Love You <i class="fas fa-heart"></i>
+        </button>
         <p id="reason"></p>
+
+        <!-- Spotify Playlist Embed -->
+        <div class="spotify-playlist">
+            <iframe style="border-radius:12px" 
+                src="https://open.spotify.com/embed/playlist/1bYZPu1Bm9NBPPiomKzxlv?utm_source=generator" 
+                width="100%" 
+                height="380" 
+                frameBorder="0" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Cute background graphics -->
+        <div class="background-heart"></div>
+        <div class="background-star"></div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
+
