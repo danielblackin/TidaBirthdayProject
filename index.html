@@ -11,11 +11,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="header-plugin"></div>
+
+    <!-- Animated Heart Background -->
+    <div class="bg_heart"></div>
+
     <div class="container">
         <h1><i class="fas fa-heart"></i> Happy Birthday, My Love! <i class="fas fa-heart"></i></h1>
         <p id="countdown"></p>
 
-        <!-- Cute Photo Slideshow with borders -->
         <div class="photo-booth">
             <button class="prev" onclick="prevSlide()">❮</button>
             <div class="slideshow">
@@ -42,21 +46,9 @@
         </button>
         <p id="reason"></p>
 
-        <!-- Spotify Playlist Embed -->
         <div class="spotify-playlist">
-            <iframe style="border-radius:12px" 
-                src="https://open.spotify.com/embed/playlist/1bYZPu1Bm9NBPPiomKzxlv?utm_source=generator" 
-                width="100%" 
-                height="380" 
-                frameBorder="0" 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy">
-            </iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/1bYZPu1Bm9NBPPiomKzxlv" width="100%" height="380" frameBorder="0"></iframe>
         </div>
-
-        <!-- Cute background graphics -->
-        <div class="background-heart"></div>
-        <div class="background-star"></div>
     </div>
 
     <script src="script.js"></script>
