@@ -5,16 +5,16 @@ function createHeart() {
     heart.style.left = `${Math.random() * 100}%`;
     heart.style.width = `${Math.random() * 40 + 20}px`;
     heart.style.height = heart.style.width;
-    heart.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    heart.style.animationDuration = `${Math.random() * 5 + 3}s`;
     document.querySelector('.bg_heart').appendChild(heart);
 
-    // Remove the heart after the animation ends
     setTimeout(() => heart.remove(), 5000);
 }
 
 // Create hearts continuously
 setInterval(createHeart, 500);
 
+// Slideshow Functionality
 let slideIndex = 0;
 const slides = document.getElementsByClassName("slides");
 
