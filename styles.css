@@ -1,53 +1,185 @@
-// Function to create a heart element with random properties
-function createHeart() {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.style.left = `${Math.random() * 100}%`;
-    heart.style.width = `${Math.random() * 40 + 20}px`;
-    heart.style.height = heart.style.width;
-    heart.style.animationDuration = `${Math.random() * 3 + 2}s`;
-    document.querySelector('.bg_heart').appendChild(heart);
-
-    // Remove the heart after the animation ends
-    setTimeout(() => heart.remove(), 5000);
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-// Create hearts continuously
-setInterval(createHeart, 500);
-
-let slideIndex = 0;
-const slides = document.getElementsByClassName("slides");
-
-function showSlide(index) {
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[index].style.display = "block";
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fce8e6;
+    padding: 20px;
+    position: relative;
 }
 
-function nextSlide() {
-    slideIndex = (slideIndex + 1) % slides.length;
-    showSlide(slideIndex);
+/* Heart Background */
+.bg_heart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
 }
 
-function prevSlide() {
-    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-    showSlide(slideIndex);
+.heart {
+    position: absolute;
+    top: -50%;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 102, 153, 0.7);
+    transform: rotate(-45deg);
+    animation: love 5s ease infinite;
 }
 
-// Initialize the first slide
-showSlide(slideIndex);
+.heart:before, .heart:after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: inherit;
+    border-radius: 50%;
+}
 
-// Reasons to love function
-const reasons = [
-    "You make me smile every day.",
-    "You always support me.",
-    "Your laugh is contagious.",
-    "You inspire me to be a better person.",
-    "Your kindness shines in everything you do."
-];
+.heart:before {
+    top: -50%;
+    left: 0;
+}
 
-function generateReason() {
-    const randomIndex = Math.floor(Math.random() * reasons.length);
-    document.getElementById("reason").innerText = reasons[randomIndex];
+.heart:after {
+    top: 0;
+    right: -50%;
+}
+
+@keyframes love {
+    0% { top: 110%; }
+    100% { top: -10%; }
+}
+
+/* Container and Decorations */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff0f5;
+    border: 4px solid #f8c0a1;
+    border-radius: 25px;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    color: #ff66a1;
+    margin-bottom: 10px;
+}
+
+/* Decorative Elements */
+.kiss-decoration {
+    position: absolute;
+    top: -40px;
+    right: -30px;
+    background-image: url('https://png.pngtree.com/png-vector/20231123/ourmid/pngtree-lipstick-kiss-on-white-background-close-png-image_10617030.png');
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+}
+
+.strawberry-decoration {
+    position: absolute;
+    bottom: -50px;
+    left: -40px;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e5785bc8-8d39-43c4-a483-1854ebc3e564/df0tkdx-f0326810-8500-4874-b47f-0836b56fcf5e.png');
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+}
+
+/* Slideshow */
+.photo-booth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+    width: 100%;
+}
+
+.slideshow {
+    width: 100%;
+    position: relative;
+    border: 5px solid #ffb3c6;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.slides {
+    width: 100%;
+    display: none;
+    border-radius: 15px;
+}
+
+.slides:first-child {
+    display: block;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: #ff91b6;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ff6c9a;
+    transform: scale(1.05);
+}
+
+button.prev, button.next {
+    background-color: #ff66a1;
+    color: white;
+    padding: 12px 18px;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+button.prev {
+    left: -40px;
+}
+
+button.next {
+    right: -40px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: #ff3f7a;
+    transform: scale(1.1);
+}
+
+/* Spotify Playlist */
+.spotify-playlist {
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+iframe {
+    border-radius: 12px;
+    width: 100%;
 }
