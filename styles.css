@@ -1,120 +1,37 @@
 /* General Styles */
 html, body {
-    height: 100%;
     margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
-}
-
-body {
+    height: 100%;
+    background-color: #fce8e6;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fce8e6;
-    padding: 40px 20px; /* Added extra padding at the top */
-    position: relative;
 }
 
-/* Heart Background */
-.bg_heart {
-    position: fixed;
-    top: 0;
-    left: 0;
+/* Game Styles */
+#obby-game {
+    position: relative;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.heart {
-    position: absolute;
-    top: -100px; /* Start above the screen */
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 102, 153, 0.7);
-    transform: rotate(-45deg);
-    animation: love 8s ease infinite; /* Adjusted for smoother movement */
-}
-
-.heart:before, .heart:after {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background: inherit;
-    border-radius: 50%;
-}
-
-.heart:before {
-    top: -50%;
-    left: 0;
-}
-
-.heart:after {
-    top: 0;
-    right: -50%;
-}
-
-@keyframes love {
-    0% {
-        top: 110%;
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        top: -10%;
-        opacity: 0;
-    }
-}
-
-/* Container and Decorations */
-.container {
+    max-width: 600px;
+    margin: 20px auto;
     text-align: center;
-    padding: 20px;
-    background-color: #fff0f5;
-    border: 4px solid #f8c0a1;
-    border-radius: 25px;
-    max-width: 500px;
-    position: relative;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    font-size: 2rem;
+canvas {
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 300px;
+}
+
+#gameMessage {
+    margin-top: 10px;
+    font-size: 1.2rem;
     color: #ff66a1;
-    margin-bottom: 10px;
-}
-
-/* Decorative Elements */
-.kiss-decoration {
-    position: absolute;
-    top: 10px; /* Moved it down for better visibility */
-    right: -30px;
-    background-image: url('https://png.pngtree.com/png-vector/20231123/ourmid/pngtree-lipstick-kiss-on-white-background-close-png-image_10617030.png');
-    width: 80px;
-    height: 80px;
-    background-size: cover;
-}
-
-.strawberry-decoration {
-    position: absolute;
-    bottom: 20px; /* Moved to ensure visibility */
-    left: -40px;
-    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e5785bc8-8d39-43c4-a483-1854ebc3e564/df0tkdx-f0326810-8500-4874-b47f-0836b56fcf5e.png');
-    width: 80px;
-    height: 80px;
-    background-size: cover;
-}
-
-.birthday-decoration {
-    position: absolute;
-    bottom: 20px; /* Moved for symmetry */
-    right: -40px;
-    background-image: url('your-birthday-decoration-url-here.png');
-    width: 100px;
-    height: 100px;
-    background-size: cover;
 }
 
 /* Slideshow */
@@ -157,7 +74,7 @@ button {
     margin-top: 20px;
     transition: background-color 0.3s ease, transform 0.3s;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Button now spans full width */
+    width: 100%;
 }
 
 button:hover {
@@ -203,3 +120,70 @@ iframe {
     border-radius: 12px;
     width: 100%;
 }
+
+/* Floating hearts background */
+.bg_heart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    top: -100px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 102, 153, 0.7);
+    transform: rotate(-45deg);
+    animation: love 8s ease infinite;
+}
+
+.heart:before, .heart:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -50%;
+    left: 0;
+}
+
+.heart:after {
+    top: 0;
+    right: -50%;
+}
+
+@keyframes love {
+    0% {
+        top: 110%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: -10%;
+        opacity: 0;
+    }
+}
+
+/* Container and Decorations */
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff0f5;
+    border: 4px solid #f8c0a1;
+    border-radius: 25px;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
