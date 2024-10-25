@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const reasons = [
         "You make me smile every day.",
-        "You always support me.",
+        "You always support mes.",
         "Your laugh is contagious.",
         "You inspire me to be a better person.",
         "Your kindness shines in everything you do."
