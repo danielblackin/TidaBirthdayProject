@@ -3,7 +3,7 @@ let currentPosition = 0;
 const carouselImages = document.getElementById("carousel-images");
 
 function scrollCarousel(direction) {
-    const imageWidth = 160; // Fixed width (image + margin)
+    const imageWidth = 160; // Image width + margin
     currentPosition += direction * imageWidth;
     if (currentPosition < 0) currentPosition = 0;
     if (currentPosition > carouselImages.scrollWidth - carouselImages.clientWidth) {
