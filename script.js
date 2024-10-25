@@ -1,18 +1,14 @@
-// Carousel Scrolling
-let currentPosition = 0;
-const carouselImages = document.getElementById("carousel-images");
+let slideIndex = 0;
 
-function scrollCarousel(direction) {
-    const imageWidth = carouselImages.querySelector("img").clientWidth + 10; // Image width + margin
-    currentPosition += direction * imageWidth;
-    if (currentPosition < 0) currentPosition = 0;
-    if (currentPosition > carouselImages.scrollWidth - carouselImages.clientWidth) {
-        currentPosition = carouselImages.scrollWidth - carouselImages.clientWidth;
-    }
-    carouselImages.scrollTo({
-        left: currentPosition,
-        behavior: "smooth"
-    });
+function moveSlide(direction) {
+    const carousel = document.getElementById('carousel');
+    const slides = carousel.getElementsByTagName('img');
+    const totalSlides = slides.length;
+
+    slideIndex = (slideIndex + direction + totalSlides) % totalSlides;
+
+    const offset = -slideIndex * carousel.clientWidth;
+    carousel.style.transform = `translateX(${offset}px)`;
 }
 
 // Floating Hearts Effect
