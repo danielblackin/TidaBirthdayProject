@@ -14,11 +14,26 @@
         <!-- Decorative Kiss Mark -->
         <div class="kiss-decoration"></div>
 
-        <!-- Carousel-style Photo Gallery -->
+        <!-- Horizontal Scrolling Photo Carousel -->
         <div class="carousel">
-            <button class="carousel-btn prev" onclick="prevImage()">❮</button>
-            <img id="carousel-img" src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image1.jpg" alt="Memory">
-            <button class="carousel-btn next" onclick="nextImage()">❯</button>
+            <button class="carousel-btn prev" onclick="scrollCarousel(-1)">❮</button>
+            <div class="carousel-images" id="carousel-images">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image1.jpg" alt="Memory 1">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image2.jpg" alt="Memory 2">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image3.jpg" alt="Memory 3">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image4.jpg" alt="Memory 4">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image5.jpg" alt="Memory 5">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image6.jpg" alt="Memory 6">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image7.jpg" alt="Memory 7">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image8.jpg" alt="Memory 8">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image9.jpg" alt="Memory 9">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image10.jpg" alt="Memory 10">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image11.jpg" alt="Memory 11">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image12.jpg" alt="Memory 12">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image13.jpg" alt="Memory 13">
+                <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image14.jpg" alt="Memory 14">
+            </div>
+            <button class="carousel-btn next" onclick="scrollCarousel(1)">❯</button>
         </div>
 
         <!-- Reasons Button and Display -->
