@@ -31,7 +31,7 @@ h1 {
     position: absolute;
     top: 0;
     right: -30px;
-    background-image: url('https://png.pngtree.com/png-vector/20231123/ourmid/pngtree-lipstick-kiss-on-white-background-close-png-image_10617030.png');
+    background-image: url('https://t4.ftcdn.net/jpg/00/01/29/59/360_F_1295909_NoXqVIbFYrWJcHaNgLdIbG3aE2hq0f.jpg'); /* Updated kiss image */
     width: 80px;
     height: 80px;
     background-size: cover;
@@ -116,18 +116,18 @@ h1 {
     position: absolute;
     bottom: 20px;
     left: -40px;
-    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e5785bc8-8d39-43c4-a483-1854ebc3e564/df0tkdx-f0326810-8500-4874-b47f-0836b56fcf5e.png');
+    background-image: url('https://www.yogurtland.com/assets/2425.png'); /* Updated strawberry image */
     width: 80px;
     height: 80px;
     background-size: cover;
 }
 
-/* Birthday Decoration */
+/* Birthday Cake Decoration */
 .birthday-decoration {
     position: absolute;
     bottom: 20px;
     right: -40px;
-    background-image: url('https://path-to-your-birthday-decoration.png');
+    background-image: url('https://png.pngtree.com/png-vector/20230418/ourmid/pngtree-birthday-cake-candles-celebration-transparent-png-image_6708793.png'); /* Updated birthday cake image */
     width: 100px;
     height: 100px;
     background-size: cover;
