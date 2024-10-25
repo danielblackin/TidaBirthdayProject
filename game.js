@@ -89,7 +89,7 @@ function resetBoard() {
 function checkForWin() {
     if (document.querySelectorAll('.flipped').length === cardsArray.length) {
         setTimeout(() => {
-            window.location.href = "index.html"; // Redirect to main page
+            window.location.href = "birthday.html"; // Redirect to main page
         }, 1000);
     }
 }
