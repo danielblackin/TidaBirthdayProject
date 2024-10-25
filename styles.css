@@ -26,6 +26,17 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Kiss Decoration */
+.kiss-decoration {
+    position: absolute;
+    top: 0;
+    right: -30px;
+    background-image: url('https://png.pngtree.com/png-vector/20231123/ourmid/pngtree-lipstick-kiss-on-white-background-close-png-image_10617030.png');
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+}
+
 /* Carousel Wrapper */
 .carousel-wrapper {
     display: flex;
@@ -100,20 +111,29 @@ h1 {
     transform: scale(1.05);
 }
 
-/* Spotify Playlist */
-.spotify-playlist {
-    margin-top: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+/* Strawberry Decoration */
+.strawberry-decoration {
+    position: absolute;
+    bottom: 20px;
+    left: -40px;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e5785bc8-8d39-43c4-a483-1854ebc3e564/df0tkdx-f0326810-8500-4874-b47f-0836b56fcf5e.png');
+    width: 80px;
+    height: 80px;
+    background-size: cover;
 }
 
-iframe {
-    border-radius: 12px;
-    width: 100%;
+/* Birthday Decoration */
+.birthday-decoration {
+    position: absolute;
+    bottom: 20px;
+    right: -40px;
+    background-image: url('https://path-to-your-birthday-decoration.png');
+    width: 100px;
+    height: 100px;
+    background-size: cover;
 }
 
-/* Floating hearts background and other decorations */
+/* Floating Hearts */
 .bg_heart {
     position: fixed;
     top: 0;
@@ -122,4 +142,47 @@ iframe {
     height: 100%;
     overflow: hidden;
     z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    top: -100px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 102, 153, 0.7);
+    transform: rotate(-45deg);
+    animation: love 8s ease infinite;
+}
+
+.heart:before, .heart:after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -50%;
+    left: 0;
+}
+
+.heart:after {
+    top: 0;
+    right: -50%;
+}
+
+@keyframes love {
+    0% {
+        top: 110%;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: -10%;
+        opacity: 0;
+    }
 }
