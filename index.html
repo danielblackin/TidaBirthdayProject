@@ -11,31 +11,35 @@
     <div class="container">
         <h1>Happy Birthday, My Love!</h1>
 
-        <!-- Cute decorations like lipstick kisses -->
+        <!-- Decorative Kiss Mark -->
         <div class="kiss-decoration"></div>
 
-        <!-- Redesigned Photo Gallery Section -->
+        <!-- Masonry-Style Photo Gallery -->
         <div class="gallery">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image1.jpg" alt="Memory 1" onclick="openLightbox(this)">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image2.jpg" alt="Memory 2" onclick="openLightbox(this)">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image3.jpg" alt="Memory 3" onclick="openLightbox(this)">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image4.jpg" alt="Memory 4" onclick="openLightbox(this)">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image5.jpg" alt="Memory 5" onclick="openLightbox(this)">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image6.jpg" alt="Memory 6" onclick="openLightbox(this)">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image7.jpg" alt="Memory 7" onclick="openLightbox(this)">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image8.jpg" alt="Memory 8" onclick="openLightbox(this)">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image9.jpg" alt="Memory 9" onclick="openLightbox(this)">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image10.jpg" alt="Memory 10" onclick="openLightbox(this)">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image11.jpg" alt="Memory 11" onclick="openLightbox(this)">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image12.jpg" alt="Memory 12" onclick="openLightbox(this)">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image13.jpg" alt="Memory 13" onclick="openLightbox(this)">
-            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image14.jpg" alt="Memory 14" onclick="openLightbox(this)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image1.jpg" alt="Memory 1" onclick="openLightbox(0)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image2.jpg" alt="Memory 2" onclick="openLightbox(1)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image3.jpg" alt="Memory 3" onclick="openLightbox(2)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image4.jpg" alt="Memory 4" onclick="openLightbox(3)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image5.jpg" alt="Memory 5" onclick="openLightbox(4)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image6.jpg" alt="Memory 6" onclick="openLightbox(5)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image7.jpg" alt="Memory 7" onclick="openLightbox(6)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image8.jpg" alt="Memory 8" onclick="openLightbox(7)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image9.jpg" alt="Memory 9" onclick="openLightbox(8)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image10.jpg" alt="Memory 10" onclick="openLightbox(9)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image11.jpg" alt="Memory 11" onclick="openLightbox(10)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image12.jpg" alt="Memory 12" onclick="openLightbox(11)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image13.jpg" alt="Memory 13" onclick="openLightbox(12)">
+            <img src="https://raw.githubusercontent.com/danielblackin/TidaBirthdayProject/main/image14.jpg" alt="Memory 14" onclick="openLightbox(13)">
         </div>
 
-        <!-- Lightbox for Full-Screen Viewing -->
-        <div id="lightbox" onclick="closeLightbox()">
-            <span class="close">&times;</span>
-            <img id="lightbox-img">
+        <!-- Lightbox for Full-Screen Viewing with Navigation -->
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" class="lightbox-img" src="">
+            <div class="lightbox-nav">
+                <button onclick="prevImage()">❮</button>
+                <button onclick="nextImage()">❯</button>
+            </div>
         </div>
 
         <!-- Reasons Button and Display -->
