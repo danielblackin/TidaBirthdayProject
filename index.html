@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Love - Birthday Website</title>
+    <title>Happy Birthday, My Love!</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1><i class="fas fa-heart"></i> Happy Birthday, My Love! <i class="fas fa-heart"></i></h1>
+        <h1>Happy Birthday, My Love!</h1>
 
+        <!-- Cute decorations like lipstick kisses -->
         <div class="kiss-decoration"></div>
 
-        <!-- Slideshow Section -->
-        <div class="photo-booth">
-            <button class="prev" onclick="prevSlide()" aria-label="Previous Slide">❮</button>
-            <div class="slideshow">
-                <!-- All images from your GitHub repository for the slideshow -->
-                <!-- Ensure images load correctly -->
-                <img class="slides" src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image1.jpg" alt="Memory 1">
-                <img class="slides" src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image2.jpg" alt="Memory 2">
-                <!-- Repeat for each slide (up to image14.jpg) -->
-            </div>
-            <button class="next" onclick="nextSlide()" aria-label="Next Slide">❯</button>
+        <!-- Redesigned Photo Gallery Section -->
+        <div class="gallery">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image1.jpg" alt="Memory 1" onclick="openLightbox(this)">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image2.jpg" alt="Memory 2" onclick="openLightbox(this)">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image3.jpg" alt="Memory 3" onclick="openLightbox(this)">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image4.jpg" alt="Memory 4" onclick="openLightbox(this)">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image5.jpg" alt="Memory 5" onclick="openLightbox(this)">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image6.jpg" alt="Memory 6" onclick="openLightbox(this)">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image7.jpg" alt="Memory 7" onclick="openLightbox(this)">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image8.jpg" alt="Memory 8" onclick="openLightbox(this)">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image9.jpg" alt="Memory 9" onclick="openLightbox(this)">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image10.jpg" alt="Memory 10" onclick="openLightbox(this)">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image11.jpg" alt="Memory 11" onclick="openLightbox(this)">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image12.jpg" alt="Memory 12" onclick="openLightbox(this)">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image13.jpg" alt="Memory 13" onclick="openLightbox(this)">
+            <img src="https://github.com/danielblackin/TidaBirthdayProject/raw/main/image14.jpg" alt="Memory 14" onclick="openLightbox(this)">
         </div>
 
-        <button onclick="generateReason()" class="love-button">
-            <i class="fas fa-heart"></i> Why I Love You <i class="fas fa-heart"></i>
-        </button>
+        <!-- Lightbox for Full-Screen Viewing -->
+        <div id="lightbox" onclick="closeLightbox()">
+            <span class="close">&times;</span>
+            <img id="lightbox-img">
+        </div>
+
+        <!-- Reasons Button and Display -->
+        <button onclick="generateReason()" class="love-button">Why I Love You</button>
         <p id="reason"></p>
 
         <!-- Spotify Playlist Embed -->
@@ -36,18 +47,14 @@
             <iframe src="https://open.spotify.com/embed/playlist/1bYZPu1Bm9NBPPiomKzxlv" width="100%" height="380" frameBorder="0"></iframe>
         </div>
 
-        <!-- Roblox Obby Game -->
-        <div id="obby-game">
-            <canvas id="gameCanvas"></canvas>
-            <p id="gameMessage"></p>
-        </div>
-
+        <!-- Decorative Elements -->
         <div class="strawberry-decoration"></div>
         <div class="birthday-decoration"></div>
+
+        <!-- Floating hearts background -->
         <div class="bg_heart"></div>
     </div>
 
     <script src="script.js"></script>
-    <script src="obby.js"></script>
 </body>
 </html>
