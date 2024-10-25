@@ -3,7 +3,6 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    height: 100%;
     background-color: #fce8e6;
     display: flex;
     justify-content: center;
@@ -27,26 +26,16 @@ h1 {
     margin-bottom: 20px;
 }
 
-.kiss-decoration {
-    position: absolute;
-    top: 10px;
-    right: -30px;
-    background-image: url('https://png.pngtree.com/png-vector/20231123/ourmid/pngtree-lipstick-kiss-on-white-background-close-png-image_10617030.png');
-    width: 80px;
-    height: 80px;
-    background-size: cover;
-}
-
+/* Masonry-Style Gallery */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-    margin-top: 20px;
+    column-count: 2; /* Adjust for more or fewer columns */
+    column-gap: 10px;
 }
 
 .gallery img {
     width: 100%;
-    border-radius: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -55,26 +44,28 @@ h1 {
     transform: scale(1.05);
 }
 
-#lightbox {
+/* Lightbox Modal */
+.lightbox {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
     align-items: center;
+    justify-content: center;
     z-index: 1000;
+    flex-direction: column;
 }
 
-#lightbox img {
+.lightbox-img {
     max-width: 80%;
     max-height: 80%;
     border-radius: 10px;
 }
 
-#lightbox .close {
+.lightbox .close {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -83,7 +74,39 @@ h1 {
     cursor: pointer;
 }
 
-/* Button and Spotify Embed */
+.lightbox-nav {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.lightbox-nav button {
+    background: #ff66a1;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.lightbox-nav button:hover {
+    background: #ff3f7a;
+}
+
+/* Floating hearts background and other decorations */
+.bg_heart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Love Button */
 .love-button {
     padding: 10px 20px;
     background-color: #ff91b6;
@@ -101,6 +124,7 @@ h1 {
     transform: scale(1.05);
 }
 
+/* Spotify Playlist */
 .spotify-playlist {
     margin-top: 20px;
     border-radius: 12px;
@@ -111,58 +135,4 @@ h1 {
 iframe {
     border-radius: 12px;
     width: 100%;
-}
-
-/* Floating hearts background */
-.bg_heart {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.heart {
-    position: absolute;
-    top: -100px;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 102, 153, 0.7);
-    transform: rotate(-45deg);
-    animation: love 8s ease infinite;
-}
-
-.heart:before, .heart:after {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background: inherit;
-    border-radius: 50%;
-}
-
-.heart:before {
-    top: -50%;
-    left: 0;
-}
-
-.heart:after {
-    top: 0;
-    right: -50%;
-}
-
-@keyframes love {
-    0% {
-        top: 110%;
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        top: -10%;
-        opacity: 0;
-    }
 }
