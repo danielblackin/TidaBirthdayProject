@@ -26,14 +26,14 @@ createHearts(20);
 
 // Reasons array for "Why I Love You" button
 const reasons = [
-    "You make me smile every day.",
-    "You always support me.",
-    "Your laugh is contagious.",
-    "You inspire me to be a better person.",
-    "Your kindness shines in everything you do.",
-    "You have the best sense of humor.",
-    "You make life more beautiful.",
-    "You’re my favorite adventure."
+    "You are sooooo sweet 😍",
+    "You are always there for me 🤗",
+    "You always make me smile and laugh :)",
+    "You make me into a better person everyday I always want to better myself for you",
+    "You're so selfless you always want to help your friends",
+    "I think you are so cute (just a bonus)",
+    "I have so much fun hanging out with you",
+    "You always come take care of me when im sick 🤢"
 ];
 
 function generateReason() {
