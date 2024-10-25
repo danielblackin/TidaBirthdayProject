@@ -39,7 +39,8 @@ h1 {
 .carousel-images {
     display: flex;
     transition: transform 0.4s ease;
-    overflow-x: auto;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
     scrollbar-width: none; /* Firefox */
 }
 
@@ -48,11 +49,12 @@ h1 {
 }
 
 .carousel-images img {
-    min-width: 100%;
-    max-width: 100%;
-    border-radius: 10px;
-    margin: 0 5px;
-    transition: transform 0.3s;
+    width: 150px; /* Set a fixed width for uniformity */
+    height: auto;
+    margin-right: 10px;
+    border-radius: 8px;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
 }
 
 .carousel-images img:hover {
