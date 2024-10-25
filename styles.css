@@ -1,5 +1,5 @@
 /* General Styles */
-html, body  {
+html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -31,10 +31,9 @@ h1 {
     display: flex;
     align-items: center;
     position: relative;
-    width: 100%; /* Full-width carousel */
+    width: 100%;
     overflow: hidden;
     margin-top: 20px;
-    padding: 0; /* Removed padding */
 }
 
 .carousel-images {
@@ -42,26 +41,26 @@ h1 {
     transition: transform 0.4s ease;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Firefox */
-    width: calc(100% - 80px); /* Leave space for buttons */
-    margin: 0 auto; /* Center the images */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    margin: 0 auto;
 }
 
 .carousel-images::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    display: none; /* Hide scrollbar in Chrome, Safari */
 }
 
 .carousel-images img {
-    width: 150px; /* Fixed width for uniform images */
-    height: auto;
-    margin-right: 10px;
+    width: 200px; /* Set a consistent width */
+    height: auto; /* Maintain aspect ratio */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    margin-right: 10px; /* Space between images */
     border-radius: 8px;
     scroll-snap-align: start;
     transition: transform 0.3s ease;
 }
 
 .carousel-images img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Hover effect */
 }
 
 /* Carousel Arrow Buttons */
@@ -77,15 +76,15 @@ h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10; /* Ensure buttons are on top of other content */
+    z-index: 10;
 }
 
 .prev {
-    left: 10px; /* Adjusted for better visibility */
+    left: 10px;
 }
 
 .next {
-    right: 10px; /* Adjusted for better visibility */
+    right: 10px;
 }
 
 .carousel-btn:hover {
