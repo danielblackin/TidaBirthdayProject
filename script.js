@@ -7,7 +7,7 @@ function moveSlide(direction) {
 
     slideIndex = (slideIndex + direction + totalSlides) % totalSlides;
 
-    const offset = -slideIndex * carousel.clientWidth;
+    const offset = -slideIndex * carousel.parentElement.clientWidth;
     carousel.style.transform = `translateX(${offset}px)`;
 }
 
