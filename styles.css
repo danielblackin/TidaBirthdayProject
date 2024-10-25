@@ -1,4 +1,3 @@
-/* General Styles */
 html, body {
     margin: 0;
     padding: 0;
@@ -7,13 +6,12 @@ html, body {
     background-color: #fce8e6;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items to the top but allow space */
+    align-items: flex-start;
 }
 
-/* Container with more top padding */
 .container {
     text-align: center;
-    padding: 60px 20px; /* Added more top padding */
+    padding: 60px 20px;
     background-color: #fff0f5;
     border: 4px solid #f8c0a1;
     border-radius: 25px;
@@ -22,17 +20,15 @@ html, body {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* Title Styling */
 h1 {
     font-size: 2rem;
     color: #ff66a1;
-    margin-bottom: 20px; /* Add more space below the title */
+    margin-bottom: 20px;
 }
 
-/* Kiss Decoration fixed */
 .kiss-decoration {
     position: absolute;
-    top: 0; /* Move it further up */
+    top: 10px;
     right: -30px;
     background-image: url('https://png.pngtree.com/png-vector/20231123/ourmid/pngtree-lipstick-kiss-on-white-background-close-png-image_10617030.png');
     width: 80px;
@@ -40,10 +36,9 @@ h1 {
     background-size: cover;
 }
 
-/* Strawberry Decoration fixed */
 .strawberry-decoration {
     position: absolute;
-    bottom: 20px; /* Keep this consistent */
+    bottom: 20px;
     left: -40px;
     background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e5785bc8-8d39-43c4-a483-1854ebc3e564/df0tkdx-f0326810-8500-4874-b47f-0836b56fcf5e.png');
     width: 80px;
@@ -51,30 +46,16 @@ h1 {
     background-size: cover;
 }
 
-/* Birthday Decoration */
-.birthday-decoration {
-    position: absolute;
-    bottom: 20px;
-    right: -40px;
-    background-image: url('your-birthday-decoration-url-here.png');
-    width: 100px;
-    height: 100px;
-    background-size: cover;
-}
-
-/* Slideshow */
 .photo-booth {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 20px 0;
-    position: relative;
     width: 100%;
 }
 
 .slideshow {
     width: 100%;
-    position: relative;
     border: 5px solid #ffb3c6;
     border-radius: 20px;
     overflow: hidden;
@@ -91,7 +72,6 @@ h1 {
     display: block;
 }
 
-/* Buttons */
 button {
     padding: 10px 20px;
     background-color: #ff91b6;
@@ -120,7 +100,6 @@ button.prev, button.next {
     transform: translateY(-50%);
     cursor: pointer;
     border-radius: 50%;
-    transition: background-color 0.3s ease, transform 0.3s;
 }
 
 button.prev {
@@ -136,7 +115,6 @@ button.prev:hover, button.next:hover {
     transform: scale(1.1);
 }
 
-/* Spotify Playlist */
 .spotify-playlist {
     margin-top: 20px;
     border-radius: 12px;
@@ -149,7 +127,6 @@ iframe {
     width: 100%;
 }
 
-/* Floating hearts background */
 .bg_heart {
     position: fixed;
     top: 0;
