@@ -33,12 +33,17 @@ h1 {
     position: relative;
     width: 100%;
     overflow: hidden;
+    max-width: 600px; /* Keep within the container width */
+}
+
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 100%;
 }
 
 .carousel img {
